@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Enemy/Enemies.gd" type="Script" id=1]
 [ext_resource path="res://Assets/tileset.png" type="Texture" id=2]
@@ -16,9 +16,7 @@
 [ext_resource path="res://UI/UI.tscn" type="PackedScene" id=14]
 [ext_resource path="res://UI/Menu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Levels/AudioStreamPlayer.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Assets/parallax3.png" type="Texture" id=17]
-[ext_resource path="res://Assets/parallax1.png" type="Texture" id=18]
-[ext_resource path="res://Assets/parallax2.png" type="Texture" id=19]
+[ext_resource path="res://UI/ParallaxBackground.tscn" type="PackedScene" id=17]
 
 [sub_resource type="NavigationPolygon" id=19]
 vertices = PoolVector2Array( 3648, -8, 3312, -8, 1664, -24, 1664, -72, 2872, 184, 2744, 184, 896, 168, 1392, 168, 3704, -1848, 3704, 440, 3648, 40, 2432, 424, 2432, 376, 2552, 312, 2552, 632, 2224, 424, 2120, 632, 2120, 440, 2224, 376, 1848, 440, 1664, 424, 1664, 376, 3312, 40, 3144, 440, 3144, 56, 1344, -216, 1344, -264, 72, -1848, 1200, -264, 1280, 232, 1280, 184, 2744, 312, 1200, 184, 2872, 56, 2304, 168, 2304, 120, 896, 120, 960, -24, 1520, -72, 1520, -24, 960, -72, 1200, -216, 2224, 120, 2224, 168, 2048, 168, 2048, 120, 1520, 376, 1520, 424, 1848, 568, 1480, 568, 1480, 504, 1416, 504, 1416, 440, 1344, 440, 1344, 376, 1208, 376, 1208, 440, 1144, 440, 1200, 232, 1144, 504, 1080, 504, 520, 360, 520, 312, 816, 168, 1080, 568, 72, 568, 72, 360, 72, 312, 752, -24, 1968, 120, 1968, 168, 1856, 120, 752, -72, 816, 120, 1392, 120, 1856, 168, 1776, 120, 1776, 168, 1472, 168, 1472, 120 )
@@ -678,40 +676,6 @@ position = Vector2( 3466, -43 )
 
 [node name="AudioStreamPlayer" parent="." instance=ExtResource( 16 )]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-offset = Vector2( 0, 220 )
-scale = Vector2( 6, 6 )
-transform = Transform2D( 6, 0, 0, 6, 0, 220 )
-follow_viewport_enable = true
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.1, 0.1 )
-motion_mirroring = Vector2( 920, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -274.5, -556 )
-scale = Vector2( 2.79722, 2.79722 )
-texture = ExtResource( 18 )
-centered = false
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.1, 0.1 )
-motion_mirroring = Vector2( 619, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( -92.5, -559.667 )
-scale = Vector2( 1.72083, 1.72083 )
-texture = ExtResource( 19 )
-centered = false
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.1, 0.1 )
-motion_mirroring = Vector2( 620, 0 )
-
-[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2( 0.5, -540.5 )
-scale = Vector2( 1.7213, 1.7213 )
-texture = ExtResource( 17 )
-centered = false
+[node name="ParallaxBackground" parent="." instance=ExtResource( 17 )]
 
 [connection signal="body_entered" from="Exit_to_2" to="Exit_to_2" method="_on_Exit_to_2_body_entered"]
