@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/blackmist II.mp3-ab0baa4b7a011a204a367f59882eb7b2.mp3str"
+
+[deps]
+
+source_file="res://Assets/blackmist II.mp3"
+dest_files=[ "res://.import/blackmist II.mp3-ab0baa4b7a011a204a367f59882eb7b2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

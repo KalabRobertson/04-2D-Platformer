@@ -3,6 +3,7 @@ extends Node2D
 onready var Bat = load("res://Enemy/Bat.tscn")
 onready var Enemy1 = load("res://Enemy/Enemy1.tscn")
 onready var Enemy2 = load("res://Enemy/Enemy2.tscn")
+onready var Thorns = load("res://Levels/Thorns.tscn")
 
 func _physics_process(_delta):
 	if not has_node("Bat"):
@@ -17,4 +18,7 @@ func _physics_process(_delta):
 		var enemy2 = Enemy2.instance()
 		add_child(enemy2)
 		enemy2.name = "Enemy2"
-
+	if not has_node("Thorns"):
+		var thorns = Thorns.instance()
+		add_child(thorns)
+		thorns.name = "Thorns"
