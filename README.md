@@ -4,16 +4,16 @@ A multi-level 2d platformer with some juiciness and features!
 
 ## Implementation
 In this game I have added the following features:
-2 Large Levels, both are elaborate
-Different Sprites
-Music
-Extra Enemies
-Parallax Backgrounds
-Save and Load features
-Score 
-Portals to different zones
-Controllable player
-The camera follows the player
+2 Large Levels, both are elaborate, 
+Different Sprites, 
+Music, 
+Extra Enemies, 
+Parallax Backgrounds, 
+Save and Load features, 
+Score, 
+Portals to different zones, 
+Controllable player, 
+The camera follows the player, 
 and some others!
 
 Built using Godot 3.2.3
